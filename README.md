@@ -1,4 +1,4 @@
-# Java-Initial ☕️
+# Java-Initial 
 
 A beginner-friendly repository for **practicing Java basics** and building a strong foundation in Java programming.
 
