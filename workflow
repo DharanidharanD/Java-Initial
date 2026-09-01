@@ -1,5 +1,3 @@
-name: Update streak stats
-
 on:
   schedule:
     - cron: "0 3 * * *" # Run every day at 03:00
