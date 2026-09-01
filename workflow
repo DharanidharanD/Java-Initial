@@ -5,23 +5,19 @@ on:
     paths:
       - ".github/workflows/streak-stats.yml" # Run any time this file is modified
   workflow_dispatch: # Run manually from the Actions tab
-
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
       - uses: actions/checkout@v4
-
       - name: Generate streak stats
         uses: DenverCoder1/github-readme-streak-stats@main
         with:
           options: user=${{ github.repository_owner }}&theme=default&disable_animations=true
           path: profile/streak.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Commit streak stats
         run: |
           git config user.name "github-actions[bot]"
